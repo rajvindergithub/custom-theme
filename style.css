@@ -16,3 +16,11 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+body{ background-color: #bcbcbc; width: 80%; max-width: 100%; margin: auto; }
+
+#menu-header-menu{ list-style: none; display: flex; justify-content: center; column-gap: 1rem;  }
+
+
+#menu-header-menu li a{ font-size: 1rem; text-decoration: none; font-weight: 400; color: #000; text-transform: capitalize;  }
+
+.logo-top{ font-size: 1.5rem; margin-top: 1.5rem; font-weight: 700;  margin-bottom: 1.5rem;  text-align: center; }
