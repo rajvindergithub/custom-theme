@@ -32,6 +32,36 @@ register_nav_menus( array(
             ) );
 
 
+//registor widget area
+
+
+function rajvinder_widgets_init(){
+    register_sidebar([
+        'name'          => esc_html__( 'Main Sidebar', 'rajvinder'), 
+        'id'            => 'main-sidebar',
+        'description'   => 'Add widgets for sidebar',
+        'before_widget' => '<section class="widget sideBarWidgetRajvinder">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',  
+    ]); 
+    
+    
+    register_sidebar([
+        'name'          => esc_html__( 'Main Sidebar Other', 'rajvinder'), 
+        'id'            => 'main-sidebar-other',
+        'description'   => 'Add widgets for sidebar',
+        'before_widget' => '<section class="widget">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',  
+    ]); 
+    
+}
+
+add_action('widgets_init', 'rajvinder_widgets_init');
+
+
 
 ?>
 

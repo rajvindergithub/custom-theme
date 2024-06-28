@@ -9,6 +9,10 @@
     <?php wp_head(); ?>
     
 </head>
+    
+    <style type="text/css">
+        #primary{ display: flex; justify-content: space-between; align-items: center; background-color: #FFF; padding: 20px; border-radius: 10px; margin: 20px 0px;  }
+    </style>
 
 <body <?php body_class( );?>>
     
@@ -16,15 +20,39 @@
         Acefone
     </section>
     
-    <nav id="site-navigation" class="main-navigation" role="navigation">
-    
-        <?php 
-            $args = [
-                'theme-location' => 'main-menu'
-            ];
+    <div id="page">
         
-            wp_nav_menu( $args );
-        
-        ?>
     
-    </nav>
+        <header id="masthead" class="site-header" role="banner">
+            
+            <nav id="site-navigation" class="main-navigation" role="navigation">
+                    <?php 
+                        $args = [
+                            'theme-location' => 'main-menu'
+                        ];
+                        wp_nav_menu( $args );
+                    ?>
+            </nav>
+            
+            <div class="site-branding">
+                <p class="site-title">
+                    <a href="<?php echo esc_url( home_url( '/' ) ) ;?>" rel="home">
+                        <?php bloginfo( 'name' );?> 
+                    </a>
+                </p>
+                <p class="site-description">
+                    <?php bloginfo( 'description' );?>
+                </p>
+                    <a href="#content" >
+                        <?php esc_html_e('Skip to content');?>
+                    </a>
+        
+            </div>
+            
+        </header>
+        
+        <div id="content">
+        
+       
+     
+    
