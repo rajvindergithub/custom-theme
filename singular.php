@@ -22,7 +22,7 @@
             
             <?php endif; ?>
             
-            <p>Template : Index.php</p>
+            <p>Template : singular.php</p>
             
         </main>
         
